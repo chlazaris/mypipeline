@@ -20,7 +20,9 @@ nextflow.enable.dsl = 2
 include { MYFIRSTPIPELINE  } from './workflows/myfirstpipeline'
 include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_myfirstpipeline_pipeline'
 include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_myfirstpipeline_pipeline'
-
+include { FASTQC                 } from '../modules/nf-core/fastqc/main'
+include { FASTP                  } from '../modules/nf-core/fastp/main'
+include { MULTIQC                } from '../modules/nf-core/multiqc/main'
 include { getGenomeAttribute      } from './subworkflows/local/utils_nfcore_myfirstpipeline_pipeline'
 
 /*
